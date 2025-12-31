@@ -1,0 +1,40 @@
+.body {
+	background-color: rgb(126, 218, 249);
+}
+
+.h1 {
+	text-align: center;
+	font-size: 70px;
+	top: 22%;
+}
+
+.pin-image {
+	position: absolute;
+	left: 24%;
+	top: 25%;
+	z-index = 1;
+}
+
+.button {
+	position: absolute;
+	width: 250px;
+	height: 83px;
+	font-size: 37px;
+	border-radius: 20px;
+	font-family: "Franklin Gothic Medium";
+	left: 52%;
+	top: 53%;
+	z-index = 3;
+}
+
+.btn{
+	position: absolute;
+	width: 250px;
+	height: 83px;
+	font-size: 37px;
+	border-radius: 20px;
+	font-family: "Franklin Gothic Medium";
+	left: 52%;
+	top: 31%;
+	z-index = 2;
+}

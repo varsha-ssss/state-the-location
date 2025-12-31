@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="instructions.css">
+		<title>State the Location - Instructions</title>
+	</head>
+	
+	<body class="body">
+		<!-- Main container for the instructions page -->
+		<div class="mainContainer">
+			<!-- Title section -->
+			<h1 class="title">How to Play</h1>
+			<h2 class="subtitle">State the Location</h2>
+			
+			<!-- Instructions panels -->
+			<div class="panels-container">
+				<!-- Panel 1: Game Objective -->
+				<div class="panel">
+					<div class="panel-number">1</div>
+					<h3 class="panel-title">Game Objective</h3>
+					<p class="panel-text">
+						Your goal is to identify all 50 U.S. states by clicking on their 
+						correct locations on the map. A state name will appear in the yellow 
+						box - find it on the map and click the gray dot!
+					</p>
+				</div>
+				
+				<!-- Panel 2: How to Play -->
+				<div class="panel">
+					<div class="panel-number">2</div>
+					<h3 class="panel-title">How to Play</h3>
+					<p class="panel-text">
+						<strong>Click the correct state:</strong> When you see a state name 
+						in the yellow box, click on the corresponding gray dot on the map. 
+						If correct, the dot will show the state's postal code (like "CA" for California).
+						<br><br>
+						<strong>Wrong answer?</strong> Click the wrong state and you'll get a 
+						3-second time penalty, and the button will flash red.
+					</p>
+				</div>
+				
+				<!-- Panel 3: Timer Controls -->
+				<div class="panel">
+					<div class="panel-number">3</div>
+					<h3 class="panel-title">Timer & Controls</h3>
+					<p class="panel-text">
+						The timer starts automatically when you begin. You can pause the game 
+						anytime using the <span class="pause-text">Pause</span> button, which 
+						will disable all state buttons. Click <span class="start-text">Start</span> 
+						to resume. Try to complete all 50 states as quickly as possible!
+					</p>
+				</div>
+				
+				<!-- Panel 4: Progress Tracking -->
+				<div class="panel">
+					<div class="panel-number">4</div>
+					<h3 class="panel-title">Track Your Progress</h3>
+					<p class="panel-text">
+						Watch the progress bar at the top left fill up as you identify states. 
+						The counter shows how many states you've completed (e.g., "25/50"). 
+						Once you reach 50/50, you win and the timer stops automatically!
+					</p>
+				</div>
+			</div>
+			
+			<!-- Play button -->
+			<button class="play-button" type="button" onclick="nextPage()">
+				Home Page
+			</button>
+		</div>
+
+		<script src="instructions.js"></script>
+	</body>
+</html>

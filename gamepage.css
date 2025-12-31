@@ -1,0 +1,213 @@
+/* Main body background color */
+.body {
+	background-color: rgb(126, 218, 249);
+}
+
+/* Container that holds the map image and state buttons */
+.map-container {
+	position: relative;
+	display: inline-block;
+	margin-left: 500px;
+	margin-top: 80px;
+}
+
+/* The US map background image */
+.map-image {
+	display: block;
+	width: 1000px;
+	height: auto;
+}
+
+/* Yellow box that shows the current state to find */
+.randomstate {
+	position: absolute;
+	left: 100px;
+	top: 39%;
+	padding: 20px 0px 40px 20px;
+	width: 300px;
+	background-color: rgb(253, 248, 182);
+	border: 1px solid black;
+}
+
+/* Container for the timer display */
+.timer-container {
+	position: absolute;
+	top: 27px;
+	left: 50%;
+    width: 50%;
+}
+
+/* Container for the progress bar */
+.progress-container {
+	position: absolute;
+	top: 27px;
+	left: 100px;
+	width: 500px;
+}
+
+/* Timer digits styling (00:00:00) */
+.digit {
+    font-size: 50px;
+    color: rgb(250, 250, 250);
+}
+
+/* Timer text labels (Hr, Min, Sec) */
+.txt {
+    font-size: 30px;
+    color: rgb(253, 248, 182);
+}
+
+/* Container for start/pause buttons */
+#buttons {
+    margin-top: 50px;
+}
+
+/* General button styling */
+.btn {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s;
+    color: white;
+}
+
+/* Start button - green */
+#start {
+	position: absolute;
+    width: 100px;
+    padding: 10px 15px;
+    top: 10px;
+	left: 540px;
+    background-color: rgb(120, 224, 159);
+}
+
+#next {
+	position: absolute;
+    width: 100px;
+    padding: 10px 15px;
+    top: 90%;
+	left: 90%;
+    background-color: rgb(255,105,180);
+}
+
+/* Pause button - red */
+#stop {
+	position: absolute;
+    width: 100px;
+    padding: 10px 15px;
+    top: 10px;
+	left: 420px;
+    background-color: rgb(255, 126, 126);
+}
+
+/* Text showing "States: X/50" */
+.progress-text {
+    font-size: 25px;
+    color: rgb(253, 248, 182);
+    margin-bottom: 10px;
+}
+
+/* White background bar for progress */
+.bar {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+/* Green fill that grows as states are completed */
+.fill {
+    height: 100%;
+    width: 0%;
+    background-color: rgb(120, 224, 159);
+}
+
+/* Base style for all state buttons - small gray circles */
+.state-button {
+	position: absolute;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	background-color: rgba(128, 128, 128, 0.6);
+	border: 2px solid black;
+	cursor: pointer;
+	font-size: 0px;
+	color: red;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* When a state is clicked correctly - shows postal code */
+.state-button.clicked {
+	font-size: 11px;
+	width: auto;
+	min-width: 25px;
+	height: auto;
+	padding: 2px 4px;
+	border-radius: 3px;
+	background-color: transparent;
+	color: black;
+	font-weight: bold;
+	white-space: nowrap;
+	border: 1px solid black;
+}
+
+/* Individual state button positions (left % and top % relative to map) */
+/* States A-M */
+.AL-button { left: 67%; top: 63%; }
+.AK-button { left: 17%; top: 73%; }
+.AZ-button { left: 24.5%; top: 56%; }
+.AR-button { left: 57%; top: 58%; }
+.CA-button { left: 13%; top: 42%; }
+.CO-button { left: 36%; top: 43%; }
+.CT-button { left: 86.5%; top: 30%; }
+.DE-button { left: 83.8%; top: 39.5%; }
+.FL-button { left: 76%; top: 70%; }
+.GA-button { left: 73%; top: 62%; }
+.HI-button { left: 37.5%; top: 83%; }
+.ID-button { left: 24%; top: 27%; }
+.IL-button { left: 62%; top: 40%; }
+.IN-button { left: 66.5%; top: 40%;  }
+.IA-button { left: 55%; top: 35%; }
+.KS-button { left: 47.5%; top: 46%; }
+.KY-button { left: 70%; top: 47%; }
+.LA-button { left: 57.5%; top: 67%; }
+.ME-button { left: 90%; top: 18%; }
+.MD-button { left: 81%; top: 39%; }
+.MA-button { left: 87%; top: 28%; }
+.MI-button { left: 68%; top: 30%; }
+.MN-button { left: 53.5%; top: 23%; }
+.MS-button { left: 62.5%; top: 63%; }
+.MO-button { left: 57%; top: 47%; } 
+
+/* States M-W */
+.MT-button {left: 33%; top: 18%;}
+.NE-button {left: 45%; top: 38%}
+.NV-button {left: 19%; top: 38%}
+.NH-button {left: 87%; top: 24%}
+.NJ-button {left: 85%; top: 36%}
+.NM-button {left: 35%; top: 55%}
+.NY-button {left: 83%; top: 27%}
+.NC-button {left: 80%; top: 52%}
+.ND-button {left: 45%; top: 19%}
+.OH-button {left: 72%; top: 39%}
+.OK-button {left: 49%; top: 55%}
+.OR-button {left: 15%; top: 24%}
+.PA-button {left: 80%; top: 35%}
+.RI-button {left: 88%; top: 30%}
+.SC-button {left: 77%; top: 58%}
+.SD-button {left: 45%; top: 29%}
+.TN-button {left: 68%; top: 53%}
+.TX-button {left: 46%; top: 66%}
+.UT-button {left: 27%; top: 40%}
+.VT-button {left: 85.5%; top: 24%}
+.VA-button {left: 80%; top: 45%}
+.WA-button {left: 18%; top: 13%}
+.WV-button {left: 75.5%; top: 44%}
+.WI-button {left: 61%; top: 29%}
+.WY-button {left: 34%; top: 31%}

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="congrats.css">
+		<title>Congratulations!</title>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.1.2/dist/confetti.browser.min.js"></script>
+	</head>
+	
+	<body class="body">
+		<!-- Main container for congratulations page -->
+		<div class="congrats-container">
+			<!-- Congratulations message -->
+			<h1 class="congrats-title" id="congratsMessage">Congratulations!</h1>
+			
+			<!-- Yellow panel showing final time -->
+			<div class="time-panel">
+				<h2 class="panel-title">Your Final Time</h2>
+				<div class="final-time" id="finalTime">00:00:00</div>
+				<p class="completion-text">All 50 States Complete!</p>
+			</div>
+			
+			<!-- Buttons -->
+			<div class="button-container">
+				<button class="action-button music-button" onclick="playSong()">Celebrate with music!</button>
+				<button class="action-button" onclick="playAgain()">Play Again</button>
+				<button class="action-button" onclick="goHome()">Home</button>
+			</div>
+			
+			<!-- Song using audio tag. Will play when button is clicked--> 
+			<!-- Reference: https://www.w3schools.com/html/html5_audio.asp--> 
+			<audio id="song">
+				<source src="song.mp3" type="audio/mpeg">
+				Sorry! Your browser does not support the audio element. 
+				<!-- Alt message -->
+			</audio>
+			
+		</div>
+		
+		<script src="congrats.js"></script>
+	</body>
+</html>

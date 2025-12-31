@@ -1,0 +1,108 @@
+/* Main body - matching game page background */
+.body {
+	background-color: rgb(126, 218, 249);
+	margin: 0;
+	padding: 0px;
+	font-family: Arial, sans-serif;
+}
+
+/* Container for all content */
+.mainContainer {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+/* Main title styling */
+.title {
+	text-align: center;
+	font-size: 60px;
+	color: white;
+	margin-bottom: 10px;
+}
+
+/* Subtitle styling */
+.subtitle {
+	text-align: center;
+	font-size: 35px;
+	color: black;
+	margin-bottom: 50px;
+	font-weight: normal;
+}
+
+/* Container for instruction panels */
+.panels-container {
+	display: grid;
+	grid-template-columns: 50% 50%; 
+	/* CSS property that specifies the number and sizes of the columns 
+	 * in a grid container, values represents the width of a column */
+	gap: 25px; 
+	margin-bottom: 50px;
+}
+
+/* Individual instruction panel - yellow theme */
+.panel {
+	background-color: rgb(253, 248, 182);
+	border: 3px solid black;
+	border-radius: 15px;
+	padding: 25px;
+	position: relative;
+}
+
+/* Number badge on each panel */
+.panel-number {
+	position: absolute;
+	top: -15px;
+	left: 20px;
+	background-color: rgb(120, 224, 159);
+	color: white;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-weight: bold;
+	border: 3px solid black;
+}
+
+/* Panel title */
+.panel-title {
+	font-size: 24px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: rgb(50, 50, 50);
+}
+
+/* Panel text content */
+.panel-text {
+	font-size: 16px;
+	color: rgb(40, 40, 40);
+}
+
+/* Colored text for pause button reference */
+.pause-text {
+	color: rgb(255, 126, 126);
+	font-weight: bold;
+}
+
+/* Colored text for start button reference */
+.start-text {
+	color: rgb(120, 224, 159);
+	font-weight: bold;
+}
+
+/* Play button styling - green to match game */
+.play-button {
+	display: block; /* researched the display and margin tags */
+	margin: 0 auto;
+	background-color: rgb(120, 224, 159);
+	color: white;
+	border: 3px solid black;
+	border-radius: 15px;
+	padding: 20px 60px;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}

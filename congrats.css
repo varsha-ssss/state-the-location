@@ -1,0 +1,77 @@
+/* Main body - matching game theme */
+.body {
+	background-color: rgb(126, 218, 249);
+	margin: 0;
+	padding: 20px;
+	font-family: Arial, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Main container */
+.congrats-container {
+	text-align: center;
+	max-width: 600px;
+	width: 100%;
+}
+
+/* Congratulations title */
+.congrats-title {
+	font-size: 70px;
+	color: white;
+	margin-bottom: 40px;
+}
+
+/* Yellow time panel - matching game theme */
+.time-panel {
+	background-color: rgb(253, 248, 182);
+	border: 3px solid black;
+	border-radius: 15px;
+	padding: 40px;
+	margin-bottom: 40px;
+}
+
+/* Panel title */
+.panel-title {
+	font-size: 30px;
+	color: rgb(50, 50, 50);
+	margin-bottom: 20px;
+}
+
+/* Final time display */
+.final-time {
+	font-size: 60px;
+	color: rgb(50, 50, 50);
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-family: monospace;
+}
+
+/* Completion text */
+.completion-text {
+	font-size: 24px;
+	color: rgb(50, 50, 50);
+	margin: 0;
+}
+
+/* Button container */
+.button-container {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+
+/* Action buttons */
+.action-button {
+	background-color: rgb(120, 224, 159);
+	color: white;
+	border: 3px solid black;
+	border-radius: 15px;
+	padding: 15px 40px;
+	font-size: 22px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 180px;
+	flex-shrink: 0;
+}

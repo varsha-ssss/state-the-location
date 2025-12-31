@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="gamepage.css">
+		<title>State the Location</title>
+	</head>
+	
+	<body class="body">	
+		<!-- Container for the US map and state buttons -->
+		<div class="map-container">
+			<!-- Background map image -->
+			<img class="map-image" src="colorMap.png" alt="pinimage" width="1000">
+			
+			<!-- State Buttons (Alabama through Missouri) -->
+			<!-- Each button is positioned absolutely over its state on the map -->
+			<button class="state-button AL-button" type="button" onclick="stateClicked('Alabama', 'AL')"></button>
+			<button class="state-button AK-button" type="button" onclick="stateClicked('Alaska', 'AK')"></button>
+			<button class="state-button AZ-button" type="button" onclick="stateClicked('Arizona', 'AZ')"></button>
+			<button class="state-button AR-button" type="button" onclick="stateClicked('Arkansas', 'AR')"></button>
+			<button class="state-button CA-button" type="button" onclick="stateClicked('California', 'CA')"></button>
+			<button class="state-button CO-button" type="button" onclick="stateClicked('Colorado', 'CO')"></button>
+			<button class="state-button CT-button" type="button" onclick="stateClicked('Connecticut', 'CT')"></button>
+			<button class="state-button DE-button" type="button" onclick="stateClicked('Delaware', 'DE')"></button>
+			<button class="state-button FL-button" type="button" onclick="stateClicked('Florida', 'FL')"></button>
+			<button class="state-button GA-button" type="button" onclick="stateClicked('Georgia', 'GA')"></button>
+			<button class="state-button HI-button" type="button" onclick="stateClicked('Hawaii', 'HI')"></button>
+			<button class="state-button ID-button" type="button" onclick="stateClicked('Idaho', 'ID')"></button>
+			<button class="state-button IL-button" type="button" onclick="stateClicked('Illinois', 'IL')"></button>
+			<button class="state-button IN-button" type="button" onclick="stateClicked('Indiana', 'IN')"></button>
+			<button class="state-button IA-button" type="button" onclick="stateClicked('Iowa', 'IA')"></button>
+			<button class="state-button KS-button" type="button" onclick="stateClicked('Kansas', 'KS')"></button>
+			<button class="state-button KY-button" type="button" onclick="stateClicked('Kentucky', 'KY')"></button>
+			<button class="state-button LA-button" type="button" onclick="stateClicked('Louisiana', 'LA')"></button>
+			<button class="state-button ME-button" type="button" onclick="stateClicked('Maine', 'ME')"></button>
+			<button class="state-button MD-button" type="button" onclick="stateClicked('Maryland', 'MD')"></button>
+			<button class="state-button MA-button" type="button" onclick="stateClicked('Massachusetts', 'MA')"></button>
+			<button class="state-button MI-button" type="button" onclick="stateClicked('Michigan', 'MI')"></button>
+			<button class="state-button MN-button" type="button" onclick="stateClicked('Minnesota', 'MN')"></button>
+			<button class="state-button MS-button" type="button" onclick="stateClicked('Mississippi', 'MS')"></button>
+			<button class="state-button MO-button" type="button" onclick="stateClicked('Missouri', 'MO')"></button>
+			
+			<!-- State Buttons (Montana through Wyoming) -->
+			<button class="state-button MT-button" type="button" onclick="stateClicked('Montana', 'MT')"></button>
+			<button class="state-button NE-button" type="button" onclick="stateClicked('Nebraska', 'NE')"></button>
+			<button class="state-button NV-button" type="button" onclick="stateClicked('Nevada', 'NV')"></button>
+			<button class="state-button NH-button" type="button" onclick="stateClicked('New Hampshire', 'NH')"></button>
+			<button class="state-button NJ-button" type="button" onclick="stateClicked('New Jersey', 'NJ')"></button>
+			<button class="state-button NM-button" type="button" onclick="stateClicked('New Mexico', 'NM')"></button>
+			<button class="state-button NY-button" type="button" onclick="stateClicked('New York', 'NY')"></button>
+			<button class="state-button NC-button" type="button" onclick="stateClicked('North Carolina', 'NC')"></button>
+			<button class="state-button ND-button" type="button" onclick="stateClicked('North Dakota', 'ND')"></button>
+			<button class="state-button OH-button" type="button" onclick="stateClicked('Ohio', 'OH')"></button>
+			<button class="state-button OK-button" type="button" onclick="stateClicked('Oklahoma', 'OK')"></button>
+			<button class="state-button OR-button" type="button" onclick="stateClicked('Oregon', 'OR')"></button>
+			<button class="state-button PA-button" type="button" onclick="stateClicked('Pennsylvania', 'PA')"></button>
+			<button class="state-button RI-button" type="button" onclick="stateClicked('Rhode Island', 'RI')"></button>
+			<button class="state-button SC-button" type="button" onclick="stateClicked('South Carolina', 'SC')"></button>
+			<button class="state-button SD-button" type="button" onclick="stateClicked('South Dakota', 'SD')"></button>
+			<button class="state-button TN-button" type="button" onclick="stateClicked('Tennessee', 'TN')"></button>
+			<button class="state-button TX-button" type="button" onclick="stateClicked('Texas', 'TX')"></button>
+			<button class="state-button UT-button" type="button" onclick="stateClicked('Utah', 'UT')"></button>
+			<button class="state-button VT-button" type="button" onclick="stateClicked('Vermont', 'VT')"></button>
+			<button class="state-button VA-button" type="button" onclick="stateClicked('Virginia', 'VA')"></button>
+			<button class="state-button WA-button" type="button" onclick="stateClicked('Washington', 'WA')"></button>
+			<button class="state-button WV-button" type="button" onclick="stateClicked('West Virginia', 'WV')"></button>
+			<button class="state-button WI-button" type="button" onclick="stateClicked('Wisconsin', 'WI')"></button>
+			<button class="state-button WY-button" type="button" onclick="stateClicked('Wyoming', 'WY')"></button>
+		</div>
+		
+		<!-- Yellow box showing the current state to find -->
+		<div>
+			<h1 class="randomstate"> State: 
+			<div id="result"></div> </h1>
+		</div>
+		
+		<!-- Timer display and control buttons -->
+		<div class="timer-container">
+			<!-- Time display with hours, minutes, seconds, centiseconds -->
+			<div id="time">
+				<span class="digit" id="hr">00</span> <!-- apply styles or scripts to a specific part of text without starting a new line -->
+				<span class="txt">Hr</span>
+				<span class="digit" id="min">00</span>
+				<span class="txt">Min</span>
+				<span class="digit" id="sec">00</span>
+				<span class="txt">Sec</span>
+				<span class="digit" id="count">00</span>
+			</div>
+			<!-- Start and pause buttons -->
+			<div id="buttons">
+				<button class="btn" id="stop">Pause</button>
+				<button class="btn" id="start">Start</button>
+			</div>
+		</div>
+		
+		<!-- Progress indicator showing how many states completed -->
+		<div class="progress-container">
+			<div class="progress-text">States: <span id="progress">0/50</span></div>
+			<!-- Progress bar that fills as states are completed -->
+			<div class="bar">
+				<div class="fill" id="fill"></div>
+			</div>
+		</div>
+		
+		<div id="buttons">
+			<button class="btn" id="next" onclick="nextClicked()" disabled = true>Next</button>
+		</div>
+		
+		<!-- Link to JavaScript file -->
+		<script src="gamepage.js"></script>
+	</body>
+</html>
