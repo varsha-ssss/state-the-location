@@ -9,8 +9,10 @@
 /* Container for all content */
 .mainContainer {
 	width: 1000px;
+	max-width: 100%;
 	margin: 0 auto;
 	padding: 0px;
+	box-sizing: border-box;
 }
 
 /* Main title styling */
@@ -105,4 +107,42 @@
 	font-size: 28px;
 	font-weight: bold;
 	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.body {
+		padding: 16px;
+	}
+
+	.mainContainer {
+		width: 100%;
+		padding: 0 8px;
+	}
+
+	.title {
+		font-size: 38px;
+	}
+
+	.subtitle {
+		font-size: 22px;
+		margin-bottom: 28px;
+	}
+
+	.panels-container {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.panel-title {
+		font-size: 20px;
+	}
+
+	.panel-text {
+		font-size: 15px;
+	}
+
+	.play-button {
+		padding: 16px 40px;
+		font-size: 22px;
+	}
 }
