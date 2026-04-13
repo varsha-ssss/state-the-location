@@ -75,39 +75,3 @@
 	width: 180px;
 	flex-shrink: 0;
 }
-
-@media (max-width: 768px) {
-	.body {
-		min-height: 100vh;
-		padding: 20px;
-	}
-
-	.congrats-title {
-		font-size: 44px;
-		margin-bottom: 24px;
-	}
-
-	.final-time {
-		font-size: 40px;
-	}
-
-	.panel-title {
-		font-size: 22px;
-	}
-
-	.completion-text {
-		font-size: 18px;
-	}
-
-	.button-container {
-		flex-wrap: wrap;
-		gap: 14px;
-	}
-
-	.action-button {
-		width: 100%;
-		max-width: 280px;
-		font-size: 18px;
-		padding: 14px 20px;
-	}
-}
