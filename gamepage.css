@@ -7,24 +7,25 @@
 .map-container {
 	position: relative;
 	display: inline-block;
-	margin-left: 500px;
+	margin-left: 330px;
 	margin-top: 80px;
 }
 
 /* The US map background image */
 .map-image {
 	display: block;
-	width: 1000px;
+	width: calc(100vw - 360px);
+	max-width: 1000px;
 	height: auto;
 }
 
 /* Yellow box that shows the current state to find */
 .randomstate {
 	position: absolute;
-	left: 100px;
+	left: 60px;
 	top: 39%;
-	padding: 20px 0px 40px 20px;
-	width: 300px;
+	padding: 14px 12px 28px 14px;
+	width: 240px;
 	background-color: rgb(253, 248, 182);
 	border: 1px solid black;
 }
@@ -41,8 +42,8 @@
 .progress-container {
 	position: absolute;
 	top: 27px;
-	left: 100px;
-	width: 500px;
+	left: 60px;
+	width: 250px;
 }
 
 /* Timer digits styling (00:00:00) */
