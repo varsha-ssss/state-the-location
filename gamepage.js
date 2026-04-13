@@ -16,7 +16,13 @@ let timer = false; // Controls whether timer is running
 window.onload = function() {
     startBtn.onclick = startButton;
     stopBtn.onclick = stopButton;
-    showState(); // Display first random state
+
+    // Set the yellow box label based on game mode
+    if (gameMode == 'capitals') {
+        document.getElementById('clueLabel').innerHTML = 'Capital:';
+    }
+
+    showState(); // Display first random state/capital
     startButton(); // Auto-start the timer
 };
 
@@ -115,17 +121,31 @@ function stopWatch() {
     }
 }
 
+// Game mode - read from sessionStorage (default to 'states')
+let gameMode = sessionStorage.getItem('gameMode') || 'states';
+
 // Game variables
 let output = "";
-let statesList = ["Alabama", "Alaska", "Arizona", "Arkansas", 
-"California", "Colorado", "Connecticut", "Delaware", "Florida", 
-"Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", 
-"Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", 
-"Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", 
-"Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", 
-"North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", 
-"Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", 
+let statesList = ["Alabama", "Alaska", "Arizona", "Arkansas",
+"California", "Colorado", "Connecticut", "Delaware", "Florida",
+"Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
+"Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts",
+"Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska",
+"Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York",
+"North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania",
+"Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah",
 "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
+
+// Capital cities in the same order as statesList
+let capitalsList = ["Montgomery", "Juneau", "Phoenix", "Little Rock",
+"Sacramento", "Denver", "Hartford", "Dover", "Tallahassee",
+"Atlanta", "Honolulu", "Boise", "Springfield", "Indianapolis", "Des Moines",
+"Topeka", "Frankfort", "Baton Rouge", "Augusta", "Annapolis", "Boston",
+"Lansing", "Saint Paul", "Jackson", "Jefferson City", "Helena", "Lincoln",
+"Carson City", "Concord", "Trenton", "Santa Fe", "Albany",
+"Raleigh", "Bismarck", "Columbus", "Oklahoma City", "Salem", "Harrisburg",
+"Providence", "Columbia", "Pierre", "Nashville", "Austin", "Salt Lake City",
+"Montpelier", "Richmond", "Olympia", "Charleston", "Madison", "Cheyenne"];
 
 // Tracks which states have been completed (true = not done, false = done)
 let stateBoolean = [true, true, true, true, true, true, true, true, true, 
@@ -166,8 +186,12 @@ function showState()
 		stateNum = Math.floor(Math.random() * 50);
 	}
 	
-	// Display the state name in the yellow box
-	output = statesList[stateNum];		
+	// Display the clue in the yellow box (state name or capital)
+	if (gameMode == 'capitals') {
+		output = capitalsList[stateNum];
+	} else {
+		output = statesList[stateNum];
+	}
 	document.getElementById("result").innerHTML = "<br>" + output;
 }
 
@@ -179,6 +203,7 @@ function saveFinalTime(finalHour, finalMinute, finalSecond) {
 	sessionStorage.setItem('finalHour', finalHour);
 	sessionStorage.setItem('finalMinute', finalMinute);
 	sessionStorage.setItem('finalSecond', finalSecond);
+	sessionStorage.setItem('gameMode', gameMode);
 }
 
 // Handles clicks on state buttons on the map
@@ -277,16 +302,4 @@ function disableStateButtons() {
 function nextClicked() {
 	// Navigate to congrats page
 	location.replace('congrats.html');
-}
-
-// Toggle zoom on the east coast region of the map
-function toggleZoom() {
-	let mapContainer = document.querySelector('.map-container');
-	mapContainer.classList.toggle('zoomed');
-	let btn = document.getElementById('zoomBtn');
-	if (mapContainer.classList.contains('zoomed')) {
-		btn.innerHTML = 'Full Map';
-	} else {
-		btn.innerHTML = 'Zoom East Coast';
-	}
 }
