@@ -278,15 +278,3 @@ function nextClicked() {
 	// Navigate to congrats page
 	location.replace('congrats.html');
 }
-
-// Toggle zoom on the east coast region of the map
-function toggleZoom() {
-	let mapContainer = document.querySelector('.map-container');
-	mapContainer.classList.toggle('zoomed');
-	let btn = document.getElementById('zoomBtn');
-	if (mapContainer.classList.contains('zoomed')) {
-		btn.innerHTML = 'Full Map';
-	} else {
-		btn.innerHTML = 'Zoom East Coast';
-	}
-}
