@@ -23,8 +23,13 @@
 	border-radius: 20px;
 	font-family: "Franklin Gothic Medium";
 	left: 52%;
-	top: 53%;
+	top: 42%;
 	z-index = 3;
+}
+
+.capitals-btn {
+	position: absolute;
+	top: 56%;
 }
 
 .btn{
@@ -35,7 +40,7 @@
 	border-radius: 20px;
 	font-family: "Franklin Gothic Medium";
 	left: 52%;
-	top: 31%;
+	top: 28%;
 	z-index = 2;
 }
 
@@ -87,5 +92,9 @@
 		height: auto;
 		padding: 16px 0;
 		font-size: 28px;
+	}
+
+	.capitals-btn {
+		top: auto;
 	}
 }

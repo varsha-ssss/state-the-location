@@ -1,5 +1,6 @@
 /*saveImage3.html, Mr. DeRuiter*/
-function nextPage(){
+function nextPage(mode){
+	sessionStorage.setItem('gameMode', mode);
 	location.replace('gamepage.html');
 }
 

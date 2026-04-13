@@ -9,8 +9,6 @@
 	</head>
 	
 	<body class="body">
-		<!-- Zoom wrapper clips the map when zoomed in -->
-		<div class="zoom-wrapper">
 		<!-- Container for the US map and state buttons -->
 		<div class="map-container">
 			<!-- Background map image -->
@@ -71,14 +69,10 @@
 			<button class="state-button WI-button" type="button" onclick="stateClicked('Wisconsin', 'WI')"></button>
 			<button class="state-button WY-button" type="button" onclick="stateClicked('Wyoming', 'WY')"></button>
 		</div>
-		</div>
 
-		<!-- Zoom toggle button -->
-		<button class="zoom-btn" id="zoomBtn" onclick="toggleZoom()">Zoom East Coast</button>
-		
-		<!-- Yellow box showing the current state to find -->
+		<!-- Yellow box showing the current clue to find -->
 		<div class="randomstate-wrapper">
-			<h1 class="randomstate"> State:
+			<h1 class="randomstate"> <span id="clueLabel">State:</span>
 			<div id="result"></div> </h1>
 		</div>
 		
