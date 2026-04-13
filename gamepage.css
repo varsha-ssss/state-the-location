@@ -3,25 +3,12 @@
 	background-color: rgb(126, 218, 249);
 }
 
-/* Wrapper that clips the map when zoomed */
-.zoom-wrapper {
-	display: inline-block;
-	overflow: hidden;
-	margin-left: 350px;
-	margin-top: 80px;
-}
-
 /* Container that holds the map image and state buttons */
 .map-container {
 	position: relative;
 	display: inline-block;
-	transition: transform 0.3s ease;
-}
-
-/* Zoomed-in view focused on the east coast */
-.map-container.zoomed {
-	transform: scale(2.5);
-	transform-origin: 84% 32%;
+	margin-left: 500px;
+	margin-top: 80px;
 }
 
 /* The US map background image */
@@ -34,13 +21,12 @@
 /* Yellow box that shows the current state to find */
 .randomstate {
 	position: absolute;
-	left: 60px;
+	left: 100px;
 	top: 39%;
-	padding: 12px 12px 20px 14px;
-	width: 220px;
+	padding: 20px 0px 40px 20px;
+	width: 300px;
 	background-color: rgb(253, 248, 182);
 	border: 1px solid black;
-	font-size: 20px;
 }
 
 /* Container for the timer display */
@@ -171,37 +157,7 @@
 	border: 1px solid black;
 }
 
-/* Zoom toggle button */
-.zoom-btn {
-	position: absolute;
-	top: 90px;
-	left: 60px;
-	padding: 10px 18px;
-	font-size: 16px;
-	font-weight: bold;
-	background-color: rgb(253, 248, 182);
-	border: 2px solid black;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
 @media (max-width: 900px) {
-	/* Zoom wrapper on mobile */
-	.zoom-wrapper {
-		order: 4;
-		margin-left: 0;
-		margin-top: 0;
-		width: 100%;
-		max-width: 600px;
-		display: block;
-	}
-
-	.zoom-btn {
-		order: 5;
-		position: static;
-		margin-top: 10px;
-		margin-bottom: 6px;
-	}
 	/* Stack everything vertically */
 	.body {
 		display: flex;
@@ -278,9 +234,11 @@
 
 	/* Map fills available width */
 	.map-container {
+		order: 4;
 		margin-left: 0;
 		margin-top: 0;
 		width: 100%;
+		max-width: 600px;
 		display: block;
 	}
 
@@ -291,7 +249,7 @@
 
 	/* Next button below map */
 	.next-wrapper {
-		order: 6;
+		order: 5;
 		margin-top: 0;
 	}
 
